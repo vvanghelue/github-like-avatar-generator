@@ -1,5 +1,10 @@
 # Github-like random avatar generator
 
+# Example :
+![alt text](https://github.com/vvanghelue/github-like-avatar-generator/blob/main/example.png?raw=true)
+
+https://codesandbox.io/s/generate-random-avatar-9mqum?file=/src/index.js
+
 ```bash
 npm i --save github-like-avatar-generator
 ```
@@ -29,6 +34,3 @@ image.src = avatar.base64;
 document.querySelector("#app").appendChild(image);
 
 ```
-
-# Example :
-![alt text](https://github.com/vvanghelue/github-like-avatar-generator/blob/main/example.png?raw=true)
