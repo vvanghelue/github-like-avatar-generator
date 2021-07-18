@@ -83,7 +83,7 @@ function getRandomColor({ canBeBlank = true }) {
     var doc = parser.parseFromString(svgCode, "image/svg+xml");
   
     return {
-      svg: doc.firstChild,
+      svgElement: doc.firstChild,
       base64: `data:image/svg+xml;base64,${btoa(doc.firstChild.outerHTML)}`,
       pixels
     };

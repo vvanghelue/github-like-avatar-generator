@@ -12,25 +12,20 @@ npm i --save github-like-avatar-generator
 ```javascript
 import generateAvatar from "github-like-avatar-generator";
 
+// directly get svg DOM element
 let avatar = generateAvatar({
   blocks: 6, // must be multiple of two
   width: 100
 });
-
-// get directly a SVG element
-document.querySelector("#app").appendChild(avatar.svg);
+document.querySelector("#app").appendChild(avatar.svgElement);
 
 
-
-// ...
+// or base64 fashion way
 avatar = generateAvatar({
   blocks: 6, // must be multiple of two
   width: 100
 });
-// or base64 fashion way
 const image = document.createElement("img");
-image.style.marginLeft = "50px";
 image.src = avatar.base64;
 document.querySelector("#app").appendChild(image);
-
 ```
