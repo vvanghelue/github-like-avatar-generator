@@ -1,6 +1,7 @@
 {
+  "type": "module",
   "name": "github-like-avatar-generator",
-  "version": "1.1.2",
+  "version": "1.1.4",
   "description": "",
   "main": "index.js",
   "scripts": {
