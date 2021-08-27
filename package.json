@@ -2,10 +2,10 @@
   "main": "./index-cjs.js",
   "module": "./index.js",
   "name": "github-like-avatar-generator",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "",
   "scripts": {
-    "build": "esbuild index.js --bundle --outfile=index-cjs.js"
+    "build": "rollup index.js --file index-cjs.js --format cjs"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,6 @@
     "color-convert": "^2.0.1"
   },
   "devDependencies": {
-    "esbuild": "^0.12.23"
+    "rollup": "^2.56.3"
   }
 }
