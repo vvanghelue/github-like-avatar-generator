@@ -106,13 +106,20 @@ function generateAvatar({
     </svg>
   `;
 
+  let base64Code;
+  if (typeof window === "undefined") {
+    base64Code = Buffer.from(svgCode).toString('base64');
+  } else {
+    base64Code = btoa(svgCode);
+  }
+
   const output = {
-    base64: `data:image/svg+xml;base64,${svgCode}`,
-    pixels
+    base64: `data:image/svg+xml;base64,${base64Code}`,
+    pixels,
   };
 
   // browser only
-  if (DOMParser) {
+  if (typeof DOMParser !== 'undefined') {
     var parser = new DOMParser();
     var doc = parser.parseFromString(svgCode, "image/svg+xml");
     output.svgElement = doc.firstChild;
