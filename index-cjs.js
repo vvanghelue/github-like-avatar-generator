@@ -105,14 +105,20 @@ function generateAvatar({
       ${pixelHTML}
     </svg>
   `;
-  var parser = new DOMParser();
-  var doc = parser.parseFromString(svgCode, "image/svg+xml");
 
-  return {
-    svgElement: doc.firstChild,
-    base64: `data:image/svg+xml;base64,${btoa(doc.firstChild.outerHTML)}`,
+  const output = {
+    base64: `data:image/svg+xml;base64,${svgCode}`,
     pixels
   };
+
+  // browser only
+  if (DOMParser) {
+    var parser = new DOMParser();
+    var doc = parser.parseFromString(svgCode, "image/svg+xml");
+    output.svgElement = doc.firstChild;
+  }
+
+  return output
 }
 
 module.exports = generateAvatar;

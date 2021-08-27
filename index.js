@@ -107,9 +107,9 @@ export default function generateAvatar({
 
   // browser only
   if (DOMParser) {
-    var parser = new DOMParser();
-    var doc = parser.parseFromString(svgCode, "image/svg+xml");
-    output.svgElement = doc.firstChild,
+    var parser = new DOMParser()
+    var doc = parser.parseFromString(svgCode, "image/svg+xml")
+    output.svgElement = doc.firstChild
   }
 
   return output
