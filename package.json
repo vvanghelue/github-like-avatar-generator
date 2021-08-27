@@ -2,7 +2,7 @@
   "main": "./index-cjs.js",
   "module": "./index.js",
   "name": "github-like-avatar-generator",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "description": "",
   "scripts": {
     "build": "rollup index.js --file index-cjs.js --format cjs"
