@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/vvanghelue/github-like-avatar-generator/issues"
   },
-  "homepage": "https://github.com/vvanghelue/github-like-avatar-generator#readme"
+  "homepage": "https://github.com/vvanghelue/github-like-avatar-generator#readme",
+  "dependencies": {
+    "color-convert": "^2.0.1"
+  }
 }
